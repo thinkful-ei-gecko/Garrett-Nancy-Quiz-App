@@ -2,55 +2,40 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How I Met Your Mother Quiz</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <title>Quiz App</title>
 </head>
 
-
 <body>
-  <header>
-    <h1> Quiz App</h1>
-  </header>
   <main>
-    <div class="question-count"></div>
-    <div class="score-count"></div>
-
-    <form>
-      <fieldset>
-        <legend class="question">the question here</legend>
-        <div class="intro"></div>
-        <div class="result">
-          <p></p>
-        </div>
-        <div class="choices">
-          <input type="radio" name="answers" id="answer-0" value="0">
-          <label for="answer-0"><span>Answer One</span></label>
-        </div>
-        <div class="choices">
-          <input type="radio" name="answers" id="answer-1" value="1">
-          <label for="answer-1"><span>Answer Two</span></label>
-        </div>
-        <div class="choices">
-          <input type="radio" name="answers" id="answer-2" value="2">
-          <label for="answer-2"><span>Answer Three</span></label>
-        </div>
-        <div class="choices">
-          <input type="radio" name="answers" id="answer-3" value="3">
-          <label for="answer-3"><span>Answer Four</span></label>
-        </div>
-        <div class="choices">
-          <input type="radio" name="answers" id="answer-4" value="4">
-          <label for="answer-4"><span>Answer Five</span></label>
-        </div>
-      </fieldset>
-      <button id="button-submit" class="button" type="submit">Submit</button>
-      <button id="button-next" class="button" type="submit">Next</button>
-    </form>
+    <header>
+      <h1 class="quiz-title">How I Met Your Mother Quiz</h1>
+    </header>
+    <section>
+      <div class="intro">
+        <p> How well do you know How I Met Your Mother?</p>
+        <button class="startButton" aria-label="Start Quiz">Start the quiz</button>
+      </div>
+    </section>
+    <section>
+      <div class="container hidden">
+        <div class="currentStats"></div>
+        <div class="results"></div>
+        <form class="js-form">
+          <fieldset class="quizAnswers">
+            <legend></legend>
+            <div class="question-container">
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="stats hidden"></div>
+    </section>
   </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </body>
 
